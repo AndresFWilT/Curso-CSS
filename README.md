@@ -1,5 +1,5 @@
 <h1>Curso CSS</h1>
-<p>Curso de CSS, tomado en Udemy desde: <a href="https://www.udemy.com/course/universidad-css-aprende-css-desde-cero-flexbox-responsive-web-desing/">link</a></p>
+<p>Curso de CSS, tomado en Udemy desde: <a href="https://www.udemy.com/course/universidad-css-aprende-css-desde-cero-flexbox-responsive-web-desing/" target="__blank">link</a></p>
 <h3>Temas</h3>
     <ul>
         <li>Leccion 1: Introduccion a CSS</li>
@@ -18,3 +18,5 @@
         <li>Leccion 14: Gradientes y sombras en CSS</li>
         <li>Leccion 15: Flexbox en CSS</li>
     </ul>
+<h2>Certificado</h2>
+<img src="https://user-images.githubusercontent.com/54086394/137230799-0994532b-1894-4911-acc6-74c4edb98ff4.jpg" alt="CertificadoCSS"/>

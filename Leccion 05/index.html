@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Leccion 05/css/style.css">
+    <title>Box model</title>
+</head>
+<body>
+    <a href="/index.html">volver</a>
+    <h1 class="titulo">Box model en CSS</h1>
+    <center>
+        <img src="resources/box-model.jpg" alt="box-model" title="box-model"/>
+    </center>
+    <p>El box model es lo que envuelve a todo elemento en html, esta en vuelto en una caja, como se aprecia la imagen
+    , tambien se puede editar cada una de las dimensiones de las partes, paritneo del hecho de que se tiene encuenta
+    primero la parte superior, derecha, inferior e izquierda. (top,right,bottom,left).</br>  
+    Para calcular el ancho y alto se tiene que tener en cuenta lo que cubre nuestro contenido (padding,borde y margen).  ejemplo: 
+    </p>
+    <div class="content">Mi contenido</div>
+    <p>Al borde es al unico elemento del box model que se le puede agregar un color.</p>
+    </br>
+    <p>Para conocer el ancho total de un elemento toca sumar, el width de la etiqueta, el borde izq y der y el padding izq y der + el margin.</p>
+    <h2 class="subtitle">Outline</h2> 
+    <p>El outline es un elemento que esta entre el margen y el borde. No se agrega un tamaño en pixeles, si no que se tiene en cuenta lo que ya esta
+        definido, ademas de que se le puede agregar un color.
+    </p>
+    <div class="content2">Mi contenido</div>
+    <p>Este puede tener inclusive mas tamaño que el margen, y puede superponerse a otros elementos HTML.
+        Se puede agregar todos los tipos de borde que se vieron en lecciones pasadas
+    </p>
+    <h2 class="subtitle">Outline Offset</h2>
+    <p>Se puede agregar al outline todos los tipos de borde, pero ademas tambien todas las caracteristicas
+        y propiedades de los borders.</br>
+        Sin embargo, se puede agregar espacio entre el outline y el borde. con Outline Offset.
+    </p>
+    <div class="content3">Mi contenido</div>
+    <p>Sin embargo, no se puede aplicar las propiedades de los bordes al outline offset. Y solo tiene un color transparente</p>
+    <h2 class="subtitle">Padding</h2>
+    <p>El padding es un elemento que cubre al contenido entre el borde y el contenido. Se puede poner
+        un valor superior, derecho, inferior e izquierdo. Como si fuera un borde, aunque no se puede poner color.
+    </p>
+    <div class="content4">Mi contenido</div>
+    <h2 class="subtitle">Box Sizing</h2>
+    <p>
+        Para calcular el ancho total de un elemento, se debe sumar el ancho del contenido, mas el padding, margin y border.
+        Para quere diseñar solo un elemento con un ancho deseado, se puede agregar la propiedad de box-sizing: border-box;
+        De esta forma, la caja se mantiene el contenido del tamaño que se le dio en el div.
+    </p>
+    <div class="content5">Mi contenido</div>
+    <p>
+        Los elementos de tipo div, de manera automatica se les puede agergar un margen con el selector universal
+        agregandole un margin y padding de 0.
+    </p>  
+    <h2 class="subtitle">Propiedad max-width</h2>
+    <p>
+        A los elementos se les puede agregar un ancho y un alto (width,height). ¿Pero que pasa si nuestra pantalla es menor que el ancho?
+        Si se reduce la ventana del navegador, sale un scroll. Pero si se quiere un diseño mas flexible, se puede usar la propiedad
+        de max-width, para ajustar los elementos sin ningun problema.
+    </p>
+    <div class="content6">Mi contenido</div>
+    <p>Tambien aplica para la altura. con max-heigth.</p>
+    <h2 class="subtitle">Propiedad Margin</h2>
+    <p>El margin, sirve para centrar elementos, con margin:auto</p>
+    <div class="content7">Mi contenido</div>
+    <p>
+        Ya que coge el mismo contenido del lado izquierdo como el derecho, por eso se centra.
+        </br> El margin se maneja como un borde, por lo que se puede poner propiedades a cada lado del margin
+    </p>
+    <h2 class="subtitle">Propiedad inherit</h2>
+    <p>inherit hereda el margen del div a los elementos internos</p>
+    <div class="content8">
+        <p class="interno">Mi contenido</p>
+    </div>
+    <h2 class="subtitle">Concepto margin collapse</h2>
+    <p>El concepto de margin collapse, surge
+        cuando se tiene mas de una caja, y el margen superior e inferior no se comporta como queremos.
+    </p>
+    <div class="content9">
+        <p class="interno">Mi contenido 1</p>
+    </div>
+    <div class="content9">
+        <p class="interno">Mi contenido 2</p>
+    </div>
+    <p>Como tal, se separan los componentes 20 pixeles, ya que se superponen, colapsan a uno solo, teniendo en cuenta
+        </br>unicamente el margen de la clase dada.
+    </p>
+    <div class="caja1">
+        <p class="interno">Caja 1 con 20 px de margin</p>
+    </div>
+    <div class="caja2">
+        <p class="interno">Caja 2 con 50 px de margin</p>
+    </div>
+    <p>Como vemos el margen que siempre se toma es el margen de mayor tamaño.</p>
+</body>
+</html>

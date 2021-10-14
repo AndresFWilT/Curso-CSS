@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a CSS</title>
+    <link href="/Leccion 01/css/estyle.css" rel="stylesheet"/>
+    <style>
+        h1{
+            color:red;
+            text-align: right;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html">volver</a>
+    <h1 style="color:blue;text-align: center;font-size: 32px;">Universidad CSS (Inline css)</h1>
+    <p class="parrafo">
+        CSS (Cascading Style Sheets), o hojas de estilo en cascada, son un lenguaje para diseño grafico 
+        que se emplea para definir y crear la presentacion de un documento estructurado, escrito en un lenguaje
+        de marcado. Ejemplo HTML o XHTML,SVG,XUL,RSS. Se usa muchisimo para decorar las paginas web.</br>
+        Existen tres formas de aplicar los estilos CSS: inline, internal y external.
+    </p>
+    <h1>Internal css</h1>
+    <p>(external) Orden de prioridad: inline,internal,external y navegador</p>
+    <p class="parrafo">
+        El inline CSS, es el estilo que se aplica directamente en la vista, en cada etiqueta con style="".
+        Por otro lado, tenemos el internal CSS, el cual es aplicado en el head, con las etiquetas de style, es
+        como si pusieramos la hoja de estilos en el header. Finalmente tenemos el external CSS, el cual esta
+        dado por un archivo de CSS y tenemos que acceder a el mediante un link. Este puede estar en nuestro proyecto 
+        o en un repositorio.
+    </p>
+</body>
+</html>

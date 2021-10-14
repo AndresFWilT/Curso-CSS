@@ -1,0 +1,42 @@
+h1{
+    /*Contraste fuente con fondo para que se pueda visualizar bien*/
+    color: #ef476f;
+    /*background-color: beige;
+    /*Alinear texto (centro, final, justificar, izq, der, inicial, heredado(inherit))*/
+    text-align: center;
+    /*Convertir todo en may, min.. etc*/
+    text-transform: uppercase;
+    /*sombra alrededor de la fuente: eje x, ejey, difuminacion y color*/
+    text-shadow: 2px 2px 2px #ced4da;
+    /*Para separar letras*/
+    letter-spacing: 2.5px;
+    /*Para separar letras*/
+    word-spacing: 3px;
+    /*decoracion doble*/
+    text-decoration: underline overline;
+}
+
+.caja{
+    padding: 15px;
+    margin: auto;
+    width: 70%;
+    background-color: #219ebc;
+    border-radius: 5px;
+    color: white;
+}
+
+.text{
+    text-align: justify;
+    /* direccion de derecha a izq*/
+    /*direction: rtl;*/
+    /*decoraciones*/
+    /*underline: subrayar, line-trough: texto tachado,overline: sobre el texto,*/
+    text-decoration: none;
+    /*Identacion*/
+    text-indent: 30px;
+    /*Separar el espacio entre lineas se peude con px*/
+    line-height: 1.2;
+    /*white-spacio, espacio-> nowrap: no se envuelve el texto*/
+    white-space: normal;
+    text-shadow: 1px 1px 2px #ced4da;
+}

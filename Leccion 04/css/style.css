@@ -1,0 +1,104 @@
+h1{
+    text-align: center;
+}
+
+.red{
+    border: 10px solid firebrick;
+    /*background-color: firebrick;*/
+}
+
+.pink{
+    /*dashed es punteada con rgb*/
+    border: 10px dashed rgb(255, 105, 180);
+    /*background-color: hotpink;*/
+}
+
+.yellow{
+    /*double es linea doble con hexadecimal*/
+    border: 10px double #ffd900;
+    /*background-color: gold;*/
+}
+
+.violet{
+    /*dotted es de puntos, con hsl*/
+    border: 10px dotted hsl(271, 76%, 53%);
+    /*background-color: blueviolet;*/
+}
+
+.green{
+    border: 10px solid lime;
+    /*background-color: lime;*/
+}
+
+.blue{
+    border: 10px solid turquoise;
+    /*background-color: turquoise;*/
+}
+
+.yellow,.green,.blue{
+    color:black;
+}
+
+.red,.pink,.violet{
+    color:black;
+}
+
+.dotted{
+    border-style: dotted;
+}
+
+.dashed{
+    border-style: dashed;
+}
+
+.solid{
+    border-style: solid;
+    color: rgba(255, 0, 0, 0.651);
+    border-radius: 20px 0px 10px 0px;
+}
+
+.double{
+    border-style: double;
+    /*si son dos, se aplica a superior e inferior, y el otro a los lados*/
+    border-width: 10px 5px;
+}
+
+.groove{
+    border-style: groove;
+    /*superior derecha inferior izquierda*/
+    border-width: 10px 5px 3px 2px;
+}
+
+.ridge{
+    /*si es solo un valor aplica a todo el borde*/
+    border-width: 10px;
+    border-style: ridge;
+}
+
+.inset{
+    /*thick-> grande, medium-> medio, thin->delgado*/
+    border-style: inset;
+    border-width: medium;
+    border-color: darkred;
+}
+
+.outset{
+    border-style: outset;
+    /*Con 3 valores se aplica a superior ambos lados e inferior, respectivamente*/
+    border-width: 10px 5px 8px;
+    border-color: teal;
+}
+
+.none-border{
+    border-style: none;
+}
+
+.hidden{
+    border-style: hidden;
+}
+
+.mixto{
+    border-style: dotted solid groove dashed;
+    border-color: red yellow aquamarine thistle;
+    border-width: 10px 20px 5px 30px;
+}

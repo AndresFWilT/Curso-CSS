@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posicionamiento de elementos con CSS</title>
+    <link rel="stylesheet" href="/Leccion 12/resources/css/style.css" />
+  </head>
+  <body>
+    <a href="/index.html">volver</a>
+    <h1 class="titulo">Posicionamiento de elementos con CSS</h1>
+    <h2 class="subtitulo">Centrar elementos de tipo DIV</h2>
+    <p class="parrafo">
+      Los elementos de tipo div, son elementos de tipo display:block, pero se
+      puede organizar para ponerlo como queramos.
+    </p>
+    <div class="ejemplo1">Este es un div</div>
+    <h2 class="subtitulo">Posicionamientos en CSS</h2>
+    <p class="parrafo">
+      Existen 5 tipos de posicionamiento en CSS:
+      static,relative,fixed,absolute,sticky.
+    </p>
+    <h3 class="subsub">Posicionamiento static</h3>
+    <p class="parrafo">
+      Es el tipo de elemento que no especifiquemos una posicion, son de tipo
+      estatic. como por ejemplo el primer div. position:static; Esta propiedad
+      muestra nuestro elemento de tipo esperado (sea block o inline). Con esta
+      propiedad no se puede usar top, bottom, right o left.
+    </p>
+    <div class="ejemplo1">Este es el mismo div</div>
+    <h3 class="subsub">Posicionamiento Relative</h3>
+    <p class="parrafo">
+      Esta propiedad permite cuadrar con los elementos de top, bottom, left o
+      right. Se ajustan segun los elementos de tipo div. Se mueve de manera
+      relativa a la posicion que le indiquemos.
+    </p>
+    <div class="ejemplo2">div relative con top 100px y left 50px</div>
+    <p class="parrafo">
+      Si agregamos elementos de parrafo, se agregan de manera natural. A pesar
+      de que este parrafo esta abajo del dive relative, se sigue mostrando
+      arriba por la posicion relativa asignada.
+    </p>
+    <p class="parrafo">Lo podemos ver con otro parrafo</p>
+    <p class="parrafo">
+      Y otro, como vemosse superponen los elementos no queda tan bien.
+    </p>
+    <h3 class="subsub">Posicionamiento Fixed o ajustado</h3>
+    <p class="parrafo">
+      Cuando usamos la posicion tipo fixed, el div se pone relativo al view
+      port, es decir a nuestra pantalla disponible
+    </p>
+    <div class="ejemplo3">div fixed con top 100px y left 50px</div>
+    <p>
+      Estos elementos son de manera fija, es el div de color azul, sirve para
+      poner marcas de agua en la pagina o informacion util
+    </p>
+    <h3 class="subsub">Posicionamiento absolute</h3>
+    <p class="parrafo">
+      Cuando usamos el absolute, se usa cuando se trabaja dentro de otro
+      elemento de tipo div. es decir, un div dentro de otro div. De esta forma
+      se posiciona de manera absoluta dentro del elemento que lo contiene. Si no
+      se agrego un div padre, se tiene en cuenta el document body.
+    </p>
+    <div class="ejemplo4">div absolute con top 0px y left 0px</div>
+    <div class="relativo">
+      Este es un div padre que es relative
+      <div class="ejemplo4">div absolute con top 0px y left 0px</div>
+    </div>
+    <p class="parrafo">No sirve si el div padre es static.</p>
+    <h3 class="subsub">Posicionamiento sticky</h3>
+    <p class="parrafo">
+      Cuando usamos el sticky, funciona de manera relativa, pero cuando sale del
+      viewport se queda quieto, como el fixed en la posicion que indicamos
+    </p>
+    <div class="ejemplo5">div sticky con top 0px</div>
+    <p class="parrafo">
+      No importa la informacion que estemos visualizando, el sticky, si se sale
+      del viewport el div con esta propiedad se superpone a cualquiera en la
+      posicion indicada. Sticky no sirve en internet explorer
+    </p>
+    <h3 class="subsub">Propiedad de z-index</h3>
+    <p><img src="/Leccion 12/resources/img/axes.png" alt="" /></p>
+    <p class="parrafo">
+      En la figura se ven varios ejes, x = x axis, y = y axis. Sin embargo en el
+      Eje z, se superponen segun coincidan y otros factores, como por ejemplo.
+      Si se tienen elementos no posicionados (p,div) con position = static, si
+      es distinto de static son posicionados. El punto es, que el z-index indica
+      un valor, y conforme se avanza en el eje z, el valor es mas grande
+      (1,2,....) El valor mas grande en un component, es el que primero se
+      muestra, si estan los dos en la misma posicion y un z index es menor,
+      entonces se oculta. Esto se agrega de manera automatica. Sin embargo, si
+      no son posicionados, se muestra el que se agregue al final.
+    </p>
+    <div class="zindexS">Elemento no posicionado (static)</div>
+    <div class="zindexR">Segundo elemento relativo</div>
+    <p class="parrafo">
+      si usamos un z index negativo en el elemento relativo, este se esconde por
+      detras del cuerpo de la pagina
+    </p>
+    <div class="zindexS">Elemento no posicionado (static)</div>
+    <div class="zindexR1">Segundo elemento relativo</div>
+    <p class="parrafo">
+      si usamos un z index positivo en el elemento relativo, este se superpone
+      por encima de los demas elementos
+    </p>
+    <div class="zindexS">Elemento no posicionado (static)</div>
+    <div class="zindexR2">Segundo elemento relativo</div>
+    <p class="parrafo">
+      si agregamos un elemento absoluto dentro de este elemento relativo, este elemento
+      absoluto se situa dentro del elemento relativo, en el punto indicado.
+      Si se aumenta su tamaño con su padding. entonces se superpondra al resto ya que fue el ultimo en ser agregado.
+      Si se le agrega un z-index negativo, se sigue mostrando pero detras del elemento relativo.
+    </p>
+    <div class="zindexS">Elemento no posicionado (static)</div>
+    <div class="zindexR2">
+      Segundo elemento relativo
+      <div class="zindexA">Tercer elemento absoluto</div>
+    </div>
+    <h3 class="subsub"><a href="/Leccion 12/elementoCentradoConImg.html">Imagen con texto centrado</a></h3>
+    <h3 class="subsub">Propiedad Overflow en CSS</h3>
+    <p class="parrafo">Si se nos desborda un elemento, es por que tiene overflow = visible</p>
+    <div class="containerclass">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus numquam tempora consequuntur harum minima optio aperiam explicabo obcaecati veniam, eligendi illo, recusandae amet! Laudantium architecto cumque deserunt veniam animi maiores!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut voluptates quod culpa necessitatibus tempore itaque quia, voluptatibus fugiat consectetur in, omnis laborum veritatis, illo nulla aut! Quae minus cupiditate saepe.
+    </div>
+    <p class="parrafo">
+      Como vemos existen distintos tipos de overflow. El primero es el de :visible, que es el por default, por lo
+      tanto, los elementos que se desborden del contenedor se superpondran. Por otra parte, tenemos el de :hidden,
+      lo que hace es ocultar la parte del elemento que se salga del div o contenedor. Tambien esta el :scroll,
+      que inserta un scroll si se necesita o no (es decir, se inserta si o si, asi se desborde o no). Por ultimo esta el de auto,
+      que pone un scroll en caso de que se desborde. El cual es el caso para el ejemplo de arriba
+    </p>
+    <p>
+      El overflow se puede aplicar en el eje  x o en el eje y. Con over-flow-x y over-flow-y, con las mismas propiedades.
+    </p>
+    <h3 class="subsub">Propiedad float en CSS</h3>
+    <p class="parrafo">
+      Aveces, es necesario acomodar nuestros elementos de manera flotada. como por ejemplo abajo.
+      Un elemento al a izquierda y otro a la derecha, si no queremos que se floten, usamos la propiedad de clear
+      a el lado que escojamos o ambos.
+    </p>
+    <!--Contenedor flotado a la izq-->
+    <div class="containerclass1 flotado cont1">
+      <b>Contenedor flotado a la izquierda.</b> </br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus numquam tempora consequuntur harum minima optio aperiam explicabo obcaecati veniam, eligendi illo, recusandae amet! Laudantium architecto cumque deserunt veniam animi maiores!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut voluptates quod culpa necessitatibus tempore itaque quia, voluptatibus fugiat consectetur in, omnis laborum veritatis, illo nulla aut! Quae minus cupiditate saepe.
+    </div>
+    <!--Contenedor flotado a la der-->
+    <div class="containerclass1 flotado cont2">
+      <b>Contenedor flotado a la derecha.</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus numquam tempora consequuntur harum minima optio aperiam explicabo obcaecati veniam, eligendi illo, recusandae amet! Laudantium architecto cumque deserunt veniam animi maiores!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut voluptates quod culpa necessitatibus tempore itaque quia, voluptatibus fugiat consectetur in, omnis laborum veritatis, illo nulla aut! Quae minus cupiditate saepe.
+    </div>
+    <!--Contenedor no flotado, con clear-->
+    <div class="containerclass1 cont3">
+      <b>Contenedor no flotado, con la propiedad clear: both.</b></br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus numquam tempora consequuntur harum minima optio aperiam explicabo obcaecati veniam, eligendi illo, recusandae amet! Laudantium architecto cumque deserunt veniam animi maiores!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut voluptates quod culpa necessitatibus tempore itaque quia, voluptatibus fugiat consectetur in, omnis laborum veritatis, illo nulla aut! Quae minus cupiditate saepe.
+    </div>
+    <h3 class="subsub">Propiedad Display: Inline-block en CSS</h3>
+    <p class="parrafo">
+        La propiedad de Display Inline-block. Si usamos solo Inline, no podemos cambiar margin,padding,top y bottom.
+        Si se usa la de Inline-Block, podemos controlar esas propiedades, ejemplo: 
+    </p>
+    <div class="containerclass2">
+      Lorem ip <span> sum dolor sit amet consectetur adipisicing elit.</span> Possimus numquam tempora consequuntur harum minima optio aperiam explicabo obcaecati veniam, eligendi illo, recusandae amet! Laudantium architecto cumque deserunt veniam animi maiores!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut voluptates quod culpa necessitatibus tempore itaque quia, voluptatibus fugiat consectetur in, omnis laborum veritatis, illo nulla aut! Quae minus cupiditate saepe.
+    </div>
+    <p class="parrafo">
+      Como vemos, se comporta como un elemento de tipo inline, a pesar de que span es de tipo block 
+  </p>
+  <ul class="menu">
+    <li>
+      <a href="#">Inicio</a>
+    </li>
+    <li>
+      <a href="#">Comprar</a>
+    </li>
+    <li>
+      <a href="#">Lista</a>
+    </li>
+  </ul>
+  </body>
+</html>

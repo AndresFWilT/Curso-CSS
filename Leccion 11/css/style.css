@@ -1,0 +1,44 @@
+h1.titulo{
+    text-align: center;
+    color: darkmagenta;
+    font-family: 'Courier New', Courier, monospace;
+}
+p.parrafo{
+    text-align: justify;
+    color: darkslategray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+h1.ejemplo,div.ejemplo,p.ejemplo{
+    border: 3px solid blueviolet;
+    text-align: center;
+    display: block;
+}
+h1.ejemplo2,div.ejemplo2,p.ejemplo2{
+    border: 3px solid blue;
+    text-align: center;
+    display: inline;
+}
+span.ejemplo31{
+    border: 3px solid deeppink;
+    text-align: center;
+    display: inline;
+}
+span.ejemplo32{
+    border: 3px solid deeppink;
+    text-align: center;
+    display: block;
+}
+h1.ejemplo3,div.ejemplo3,p.ejemplo3{
+    border: 3px solid deepskyblue;
+    text-align: center;
+    display: block;
+}
+a.ejemplo4{
+    color: forestgreen;
+}
+a.ejemplo5{
+    display: block;
+    color:grey;
+    text-align: center;
+}

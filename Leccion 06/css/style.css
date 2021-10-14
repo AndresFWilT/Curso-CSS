@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+    color: #e63946;
+}
+
+.caja{
+    padding: 10px;
+    /*Color por nombre HTML*/
+    color: white;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    margin: 5px auto;
+    font-size: 10px;
+    float:left;
+}
+
+.red{
+    background-color: crimson;
+}
+
+.pink{
+    background-color: deeppink;
+}
+/*Color por RGB (red green blue) va de 0 - 255*/
+.rgb{
+    background-color: rgb(131,56,236);
+}
+/*Color por RGBA (A = alpha, transparencia) va de 0 - 1*/
+.rgba{
+    background-color: rgb(131,56,236,.5);
+}
+
+.hexadecimal{
+    /*El color hexadecimal (0-15) usa 6 digitos, por 3 pares*/
+    /*Cada par como si fuera el RGB, pero teniendo en cuenta el hexadecimal*/
+    /*Se inicia con el #*/
+    background-color: #0091AD;
+    /*Para simplificar por pares, se usa una sola letra*/
+    /*Ejemplo para el blanco:  background-color:#FFFFFF*/
+    /*Simplificado:   background-color:#fff*/
+    /*Otro ejemplo:   background-color:#FFAA22*/
+    /*simplificado:   background-color:#FA2*/
+}
+
+.hexa_transparencia{
+    /*La transparencia se maneja en codigo hexadecimal*/
+    background-color: #0090ad88;
+}
+
+.hsl{
+    /*0-360,%,%*/
+    background-color: hsl(195,100%,50%);
+}
+
+.hsla{
+    /*0-360,%,%*/
+    background-color: hsl(195,100%,50%,0.5);
+}

@@ -1,0 +1,20 @@
+body{
+    background-color: dodgerblue;
+    color: cornsilk;
+    background-image: url("/Leccion 07/resources/img/fondo.jpg");
+    /*Repetir fondo*/
+    background-repeat: repeat;
+    /*Posicion del fondo en la pagina*/
+    background-position: right top;
+    /*Si se queda con el scroll, o no (fixed = fija) (scroll = baja con el scroll)*/
+    background-attachment: fixed;
+    /*en una sola linea
+        background: dodgerblue url("/resources/img/fondo.jpg") no-repeat right top;
+        la unica propiedad que se pone por separado es la de attachment
+    */
+}
+
+h1{
+    text-align: center;
+    background-color: dodgerblue;
+}

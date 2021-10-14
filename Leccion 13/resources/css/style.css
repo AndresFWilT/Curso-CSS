@@ -1,0 +1,124 @@
+h1.title{
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:darkgoldenrod
+}
+h2.subtitulo{
+    text-align: center;
+    color: rgb(117, 88, 185)
+}
+h3.subsub{
+    text-align: center;
+    color: crimson;
+}
+p.parrafo{
+    text-align: justify;
+    color: black;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+div.container1{
+    width: 80%;
+    height: 20%;
+    margin:auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color:#457b9d;
+}
+/*Para hacer un descendiente escribimos la clase y luego el elemento html de la etiqueta que queremos */
+div.container1.descendiente p{
+    /*todos los elementos de tipo parrafo que esten ahi o dentro de alguno embebido dentro de
+        el div, tendran el color
+    */
+    background-color: #fdffb6;
+}
+/*Para hacer un hijo, escribimos la clase y luego > despues el elemento html de la etiqueta que queremos */
+div.container1.hijo > p{
+    /*todos los elementos de tipo parrafo que sean hijos directos, tendran el color*/
+    background-color: #b6ffc8;
+}
+/*Para hacer un hijo, escribimos la clase y luego + despues el elemento html de la etiqueta que queremos */
+div.container1.adyascente + p{
+    /*todos los elementos que esten directamente despues, tendran el color*/
+    background-color: #cabbff;
+}
+/*Para hacer un hijo, escribimos la clase y luego + despues el elemento html de la etiqueta que queremos */
+div.container1.hermano ~ p{
+    /*todos los elementos que esten directamente despues, tendran el color*/
+    background-color: #ffcebb;
+}
+
+div.container2{
+    width: 30%;
+    height: 20%;
+    margin:auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color:#457b9d;
+    text-align: center;
+}
+
+
+/*:para poner propiedades, hover es el mouse sobre*/
+div.container2:hover{
+    background-color: #457b9d;
+    color: #f1faee;
+
+}
+/*los parrafos que descendientes de el div, se ocultaran*/
+div.container2.oculto p{
+    display: none;
+}
+/*al pasar por encima..*/
+div.container2.oculto:hover p{
+    display:block;
+    background-color: #a8dadc;
+    color: #023e8a;
+    padding: 15px;
+}
+
+/*Pseudo clase de parrafo primer hijo, se le aplica letras minusculas*/
+div.container2.primero p:first-child{
+    font-variant: small-caps;
+}
+/*Al seleccionar la etiqueta tipo parrafo, se pondra con las siguientes caracteristicas*/
+div.container1 p::selection{
+    color: red;
+    background-color: yellow;
+}
+/*Solo aplica a la primer linea de texto los smallcaps, depende del portview*/
+div.container1 p::first-line{
+    font-variant: small-caps;
+    color:red
+}
+/*Primer letra del parrafo*/
+div.container1 p::first-letter{
+    font-size: 1.5em;
+}
+/*before para agregar algo antes del parrafo*/
+div.container1 p::before{
+    /*Se usa content para agregar*/
+    content: "- ";
+}
+/*after para agregar algo despues del parrafo*/
+div.container1 p::after{
+    /*Se usa content para agregar cadena*/
+    content: " -";
+    /*content: url() se usaria para poner una imagen o recurso*/
+}
+
+div.container3{
+    width: 30%;
+    height: 20%;
+    margin:auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color:#457b9d;
+    text-align: center;
+}
+img{
+    opacity: 0.5;
+}
+img:hover{
+    opacity: 1.0;
+}

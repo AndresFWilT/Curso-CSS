@@ -1,0 +1,9 @@
+/*Agrupacion de selectores*/
+h1,h3,p{
+  color:crimson;
+  text-align: center;  
+}
+/*subclases para parrafo (aplica a cualquier etiqueta)*/
+p.center{
+    text-align: center;
+}

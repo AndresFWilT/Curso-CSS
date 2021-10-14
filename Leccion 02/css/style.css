@@ -1,0 +1,29 @@
+/*Selector universal*/
+*{
+    /*Se aplica a toda la pagina (etiquetas etc)*/
+    background-color: ghostwhite;
+}
+/*ID centrar*/
+#title{
+    color:crimson;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*ID subtitulo*/
+#subtitle{
+    color:darkkhaki;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Clase para todo tipo de etiqueta poner a la derecha*/
+.right{
+    text-align: right;
+}
+/*clase texto grande*/
+.bg_text{
+    font-size: 32px;
+}
+/*Clase para etiqueta tipo parrafo centrar*/
+p.center{
+    text-align: center;
+}

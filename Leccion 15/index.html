@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Leccion 15/resources/css/style.css">
+    <title>Flexbox en CSS</title>
+</head>
+<body>
+    <a href="/index.html">volver</a>
+    <h1 class="title">Flexbox en CSS</h1>
+    <p class="parrafo">
+        El flexbox, nos permite agregar elementos a un contenedor (div) y en ese div agregar otros elementos. (imagenes,
+        parrafos, etc). Antes se podian ordenar los divs al flotarlos, pero es mas sencillo hacerlo con flexbox.
+    </p>
+    <div class="container">
+        <p>Texto 1</p>
+        <p>Texto 2</p>
+        <p>Texto 3</p>
+    </div>
+    <p class="parrafo">
+        Se usa display:flex, los elementos se situacion de izquierda a derecha aunque se puede configurar.
+        La propiedad row-reverse o column-revers nos permite ordenar al reves los elementos dependiendo de si
+        se estan flotando de forma de block (column) o flex (row). Esto se aplica en el contenedor que contiene todo.</br>
+        Existe otra propiedad, de wrap, que es dependiendo del view port, si nuestros elementos se mantienen en pantalla o no.
+        flex-wrap: nowrap, (los elementos se ponen abajo en funcion del espacio) flex-warp:wrap(los elementos quedan fuera del viewport).
+        Esto se puede poner en un solo atributo, con flex-flow: row wrap
+    </p>
+    <p class="parrafo">
+        Se pueden acomodar los elementos de distinta forma, izquierda derecha o centro.
+        Si queremos cuadrarlo en el lado izquierdo, se usa justify-content:flex-start, centro justify-content:center,
+        derecha justify-content:end.
+    </p>
+    <div class="container1">
+        <p>Texto 1 con flex start</p>
+        <p>Texto 2 con flex start</p>
+        <p>Texto 3 con flex start</p>
+    </div>
+    </br>
+    <div class="container3">
+        <p>Texto 1 con justify-content:center</p>
+        <p>Texto 2 justify-content:center</p>
+        <p>Texto 3 justify-content:center y wrap</p>
+    </div>
+    </br>
+    <div class="container2">
+        <p>Texto 1 con flex end</p>
+        <p>Texto 2 con flex end</p>
+        <p>Texto 3 con flex end</p>
+    </div>
+    <p class="parrafo">
+        con justify-content:space-between se ponen los de los lados a los extremos y se mantiene el del centro.
+        Con el de justify-content:space-around, podemos agregar un espacio a los extremos y el centro tambien se mantiene.
+        Con justify-content:space-evenly, se mantiene el espacio entre cada uno de los elementos en la misma proporcion
+    </p>
+    <div class="container4">
+        <p>Texto 1 con justify-content:space-between</p>
+        <p>Texto 2 justify-content:between</p>
+        <p>Texto 3 justify-content:between y wrap</p>
+    </div>
+    </br>
+    <div class="container5">
+        <p>Texto 1 con justify-content:space-around</p>
+        <p>Texto 2 con justify-content:space-around</p>
+        <p>Texto 3 con justify-content:space-around</p>
+    </div>
+    </br>
+    <div class="container6">
+        <p>Texto 1 con justify-content:space-evenly</p>
+        <p>Texto 2 con justify-content:space-evenly</p>
+        <p>Texto 3 con justify-content:space-evenly</p>
+    </div>
+    <p class="parrafo">
+        con align-items, se maneja igual que el justify-content, pero de forma vertical, asi que se puede centrar
+        completamente un elemento. Sin embargo tiene otras propeidades como stretch y baseline.
+        El stretch alinea los elementos de forma vertical (tienen todo el alto del div), el baseline pone una
+        linea en la mitad de todos los elementos. crecen segun el alto de cada parrafo, de arriba abajo.
+        Aunque si se alinea el centro, divide en partes iguales todos los elementos que esten en la caja.
+        El baseline se alinea segun el centro del texto, no segun su padding o tamaño de borde. con center, si
+        se tiene en cuenta la caja.
+    </p>
+    </br>
+    <div class="container7">
+        <p>Texto 1</p>
+        <p>Texto 2</p>
+        <p>Texto 3</p>
+    </div>
+    <p class="parrafo">
+        La propiedad align-content, nos permite alinear elementos de forma vertical, se aplica en el contendor mayor.
+        Tiene las mismas propiedades que los mencionados anterior mente, pero esta aplica a la modificacion de los elemntos
+        de forma vertical, segun el viewport.
+    </p>
+    <div class="container8">
+        <p style="height: 100px;">Texto 1</p>
+        <p>Texto 2</p>
+        <p style="height: 5px;">Texto 3</p>
+    </div>
+    <p class="parrafo">
+        con style order=1, o =2 o 3, podemos ordenar los elementos
+    </p>
+    <div class="container9">
+        <p style="order:2">Texto 1</p>
+        <p>Texto 2</p>
+        <p style="order:1">Texto 3</p>
+    </div>
+    <p class="parrafo">
+        con flex-grow, podemos indicar la prioridad de cada elemento en nuestro div. valores positivos
+    </p>
+    <div class="container9">
+        <p style="flex-grow:1">Texto 1</p>
+        <p style="flex-grow: 1">Texto 2</p>
+        <p style="flex-grow: 10">Texto 3</p>
+    </div>
+    <p class="parrafo">
+        con flex-basis, tambien para cambiar el ancho, pero se puede especificar con pixeles.
+        flex-basis:200px
+    </p>
+    <div class="container9">
+        <p style="flex-basis:200px">Texto 1 (aplicado a este)</p>
+        <p>Texto 2</p>
+        <p>Texto 3</p>
+    </div>
+    <p class="parrafo">
+        con align-self, podemos centrar solo un elemento.
+    </p>
+    <div class="container9">
+        <p style="flex-basis:200px">Texto 1 (aplicado a este)</p>
+        <p style="align-self:center;height: 150px;">Texto 2</p>
+        <p>Texto 3</p>
+    </div>
+</body>
+</html>

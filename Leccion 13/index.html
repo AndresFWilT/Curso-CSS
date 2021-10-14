@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Leccion 13/resources/css/style.css">
+    <title>Selectores en CSS</title>
+</head>
+<body>
+    <a href="/index.html">volver</a>
+    <h1 class="title">Selectores en CSS</h1>
+    <p class="parrafo">
+        Los selectores es un identificador de hoja, o elementos al DOM. Se aplican con declaraciones contenidas.
+    </p>
+    <h2 class="subtitulo">Selector descendiente</h1>
+    <p class="parrafo">
+        El selector descendiente, es el primer selector combinado. Una vez seleccionemos un estilo para un elemento,
+        se aplica el estilo configurado para todos los elementos descendientes, sin depender si son elementos directos
+        o indirectos. Es decir que son elementos hijos y elementos dentro de otros elementos.
+        Para hacerlo, ponemos el nombre de la clase y luego el elemento html.</br>
+        div.container.descendiente p{}
+    </p>
+    <div class="container1 descendiente">
+        Selectores descendientes (en cualquier nivel interno)
+        <p>Primer renglon hijo directo div</p>
+        <p>Segundo renglon hijo directo div</p>
+        <section>
+            <!--Puede ser tambien un div o cualquier elemento qeu envuelva un parrafo-->
+            <p>Tercer renglon hijo directo section, descendiente de div</p>
+        </section>
+    </div>
+    <h2 class="subtitulo">Selector Child</h2>
+        <p class="parrafo">
+            El selector Child, solo seleccion a los elementos que son hijos directos.
+            Para hacerlo se pone el nombre de la clase > y el nombre del elemento.</br>
+            div.container.hijo > p{}
+        </p>
+        <div class="container1 hijo">
+            Selectores hijos (descendiente directo)
+            <p>Primer renglon hijo directo div</p>
+            <p>Segundo renglon hijo directo div</p>
+            <section>
+                <!--Puede ser tambien un div o cualquier elemento qeu envuelva un parrafo-->
+                <p>Tercer renglon hijo directo section, descendiente de div</p>
+            </section>
+        </div>
+        <h2 class="subtitulo">Selector Siblings</h2>
+        <h3 class="subsub">Selector Adyacente</h3>
+        <p class="parrafo">
+            El selector adyascente, unicamente configura los estilos que deseemos para los que esten inmediatamente despues
+            (es decir, abajo o despues de la etiqueta al que le pongamos el +). Para hacerlo primero
+            escribimos la clase + y elemento</br>
+            div.container.adyascente + p{}
+        </p>
+        <div class="container1 adyascente">
+            Selectores adyascentes (el mas cercano)
+            <p>Primer renglon hijo directo div</p>
+        </div>
+        <p>Segundo renglon (adyascente del div)</p>
+        <h3 class="subsub">Selector Hermano</h3>
+        <p class="parrafo">
+            El selector hermano, unicamente configura los estilos que deseemos para los hermanos del div.
+            Los hermanos son los parrafos que se encuentran al mismo nivel.
+            Para hacerlo primero escribimos la clase ~ y elemento</br>
+            div.container.adyascente ~ p{}
+        </p>
+        <div class="container1 hermano">
+            Selectores adyascentes (el mas cercano)
+            <p>Primer renglon hijo directo div</p>
+        </div>
+        <p>Segundo renglon (adyascente del div tambien hermano)</p>
+        <p>Tercer renglon (hermano de tipo parrafo (mismo nivel))</p>
+        <h2 class="subtitulo">Pseudo clases en CSS</h2>
+        <div>
+            <p class="parrafo">
+                Las pseudo clases, nos permiten manipular estados de los elementos HTML.
+                Por ejemplo como pasar por encima de elementos (hover), o tener varios parrafos
+                y aplicar cierto estilo a solo el primer parrafo. Las pseudo clases se usan con :
+            </p>
+        </div>
+        <div class="container2 oculto">
+            Pasa por encima
+            <p>Se muestra el parrafo al pasar por encimas</p>
+        </div>
+        <div class="container2 primero">
+            <p>Primer parrafo</p>
+            <p>Segundo parrafo</p>
+        </div>
+        <h2 class="subtitulo">Pseudo elementos en CSS</h2>
+        <div>
+            <p class="parrafo">
+                Los pseudo elementos, permiten agregar un estilo a ciertas etiquetas, se agregan de formas particulares.
+                Se puede agregar un elemento, antes o despues de un elemento seleccionado html. O modificar el primer
+                parrafo, la primer linea.. etc. Los pseudo elementos se escriben con ::
+            </p>
+        </div>
+        <div class="container1">
+            <p>Selecciona el texto</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita magni omnis cumque nobis! Eius animi consectetur tempora, obcaecati error veniam hic fugit sequi quidem voluptatibus, atque ad! Animi, temporibus dolor!</p>
+        </div>
+        <div>
+            <p class="parrafo">
+                Algunos psuedo elementos, dependen del portview.
+            </p>
+        </div>
+        <h2 class="subtitulo">Transparencia de imagenes CSS</h2>
+        <div>
+            <p class="parrafo">
+                Se puede cambiar la opacidad de una imagen con el hover.
+            </p>
+        </div>
+        <div class="container3">
+            <img src="http://globalmentoring.com.mx/imagenes/html5.png" alt="logo HTML">
+        </div>
+</body>
+</html>
